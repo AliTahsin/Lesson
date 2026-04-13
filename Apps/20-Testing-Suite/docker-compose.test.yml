@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  test-database:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpass
+      POSTGRES_DB: testdb
+    ports:
+      - "5432:5432"
+
+  test-redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  test-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Test
+      - ConnectionStrings__DefaultConnection=Host=test-database;Database=testdb;Username=testuser;Password=testpass
+      - Redis__ConnectionString=test-redis:6379
+    depends_on:
+      - test-database
+      - test-redis
+    ports:
+      - "5000:5000"
+
+  test-runner:
+    image: mcr.microsoft.com/dotnet/sdk:8.0
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: dotnet test Backend.Tests/Backend.Tests.csproj
+    depends_on:
+      - test-api
+      - test-database
+      - test-redis
+
+  k6:
+    image: grafana/k6:latest
+    volumes:
+      - ./Load.Tests:/scripts
+    command: run /scripts/load-test.js
+    environment:
+      - BASE_URL=http://test-api:5000
+    depends_on:
+      - test-api
+
+  zap:
+    image: owasp/zap2docker-stable
+    command: zap-full-scan.py -t http://test-api:5000 -r report.html
+    volumes:
+      - ./Security.Tests:/zap/wrk
+    depends_on:
+      - test-api

@@ -1,0 +1,161 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'hotel-monitoring'
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - alertmanager:9093
+
+rule_files:
+  - "alerts.yml"
+
+scrape_configs:
+  # API Gateway
+  - job_name: 'api-gateway'
+    static_configs:
+      - targets: ['api-gateway:8080']
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+
+  # Logging API
+  - job_name: 'logging-api'
+    static_configs:
+      - targets: ['logging-api:5017']
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+
+  # Hotel Management
+  - job_name: 'hotel-management'
+    static_configs:
+      - targets: ['hotel-management:5000']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Room Management
+  - job_name: 'room-management'
+    static_configs:
+      - targets: ['room-management:5001']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Reservation System
+  - job_name: 'reservation-system'
+    static_configs:
+      - targets: ['reservation-system:5002']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Dynamic Pricing
+  - job_name: 'dynamic-pricing'
+    static_configs:
+      - targets: ['dynamic-pricing:5003']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # CRM Loyalty
+  - job_name: 'crm-loyalty'
+    static_configs:
+      - targets: ['crm-loyalty:5004']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Channel Management
+  - job_name: 'channel-management'
+    static_configs:
+      - targets: ['channel-management:5005']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Payment Invoice
+  - job_name: 'payment-invoice'
+    static_configs:
+      - targets: ['payment-invoice:5006']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Housekeeping
+  - job_name: 'housekeeping'
+    static_configs:
+      - targets: ['housekeeping:5007']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Restaurant FB
+  - job_name: 'restaurant-fb'
+    static_configs:
+      - targets: ['restaurant-fb:5008']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # MICE Meeting
+  - job_name: 'mice-meeting'
+    static_configs:
+      - targets: ['mice-meeting:5009']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Reporting BI
+  - job_name: 'reporting-bi'
+    static_configs:
+      - targets: ['reporting-bi:5010']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Auth RBAC
+  - job_name: 'auth-rbac'
+    static_configs:
+      - targets: ['auth-rbac:5011']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Notification Push
+  - job_name: 'notification-push'
+    static_configs:
+      - targets: ['notification-push:5012']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # AI Recommendation
+  - job_name: 'ai-recommendation'
+    static_configs:
+      - targets: ['ai-recommendation:5013']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Chatbot NLP
+  - job_name: 'chatbot-nlp'
+    static_configs:
+      - targets: ['chatbot-nlp:5014']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Mobile Customer
+  - job_name: 'mobile-customer'
+    static_configs:
+      - targets: ['mobile-customer:5015']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Mobile Staff
+  - job_name: 'mobile-staff'
+    static_configs:
+      - targets: ['mobile-staff:5016']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # Node Exporter (system metrics)
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    scrape_interval: 15s
+
+  # Elasticsearch
+  - job_name: 'elasticsearch'
+    static_configs:
+      - targets: ['elasticsearch:9200']
+    metrics_path: '/_prometheus/metrics'
+    scrape_interval: 30s

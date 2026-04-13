@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/DyanamicPricing.API.props" />
+</Project>

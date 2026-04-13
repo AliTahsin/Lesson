@@ -1,0 +1,7 @@
+/data/data/com.termux/files/home/Lesson/Lesson-main/Apps/06-ChannelManagement/Backend/ChannelManagement.API/obj/Debug/net8.0/ChannelManagement.API.csproj.AssemblyReference.cache
+/data/data/com.termux/files/home/Lesson/Lesson-main/Apps/06-ChannelManagement/Backend/ChannelManagement.API/obj/Debug/net8.0/ChannelManagement.API.GeneratedMSBuildEditorConfig.editorconfig
+/data/data/com.termux/files/home/Lesson/Lesson-main/Apps/06-ChannelManagement/Backend/ChannelManagement.API/obj/Debug/net8.0/ChannelManagement.API.AssemblyInfoInputs.cache
+/data/data/com.termux/files/home/Lesson/Lesson-main/Apps/06-ChannelManagement/Backend/ChannelManagement.API/obj/Debug/net8.0/ChannelManagement.API.AssemblyInfo.cs
+/data/data/com.termux/files/home/Lesson/Lesson-main/Apps/06-ChannelManagement/Backend/ChannelManagement.API/obj/Debug/net8.0/ChannelManagement.API.csproj.CoreCompileInputs.cache
+/data/data/com.termux/files/home/Lesson/Lesson-main/Apps/06-ChannelManagement/Backend/ChannelManagement.API/obj/Debug/net8.0/ChannelManagement.API.MvcApplicationPartsAssemblyInfo.cs
+/data/data/com.termux/files/home/Lesson/Lesson-main/Apps/06-ChannelManagement/Backend/ChannelManagement.API/obj/Debug/net8.0/ChannelManagement.API.MvcApplicationPartsAssemblyInfo.cache

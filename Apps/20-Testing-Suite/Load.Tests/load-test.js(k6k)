@@ -1,0 +1,47 @@
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+export const options = {
+    stages: [
+        { duration: '30s', target: 20 },  // Ramp up to 20 users
+        { duration: '1m', target: 20 },   // Stay at 20 users
+        { duration: '30s', target: 50 },  // Ramp up to 50 users
+        { duration: '1m', target: 50 },   // Stay at 50 users
+        { duration: '30s', target: 0 },   // Ramp down to 0
+    ],
+    thresholds: {
+        http_req_duration: ['p(95)<500'], // 95% of requests must complete within 500ms
+        http_req_failed: ['rate<0.01'],   // Less than 1% error rate
+    },
+};
+
+const BASE_URL = 'http://localhost:8080';
+
+export default function () {
+    // Test GET /api/hotels
+    let hotelsRes = http.get(`${BASE_URL}/api/hotels`);
+    check(hotelsRes, {
+        'hotels status is 200': (r) => r.status === 200,
+        'hotels response time < 500ms': (r) => r.timings.duration < 500,
+    });
+
+    // Test GET /api/rooms
+    let roomsRes = http.get(`${BASE_URL}/api/rooms`);
+    check(roomsRes, {
+        'rooms status is 200': (r) => r.status === 200,
+    });
+
+    // Test POST login
+    let loginRes = http.post(`${BASE_URL}/api/auth/login`, JSON.stringify({
+        email: 'admin@hotel.com',
+        password: 'Admin123!'
+    }), {
+        headers: { 'Content-Type': 'application/json' },
+    });
+    
+    check(loginRes, {
+        'login status is 200': (r) => r.status === 200,
+    });
+
+    sleep(1);
+}

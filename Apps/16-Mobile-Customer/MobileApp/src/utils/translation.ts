@@ -1,0 +1,235 @@
+export const translations: Record<string, Record<string, string>> = {
+  tr: {
+    // General
+    welcome: "Hoş Geldiniz",
+    hotel_name: "Otel Yönetim Sistemi",
+    loading: "Yükleniyor...",
+    error: "Hata",
+    success: "Başarılı",
+    save: "Kaydet",
+    cancel: "İptal",
+    confirm: "Onayla",
+    delete: "Sil",
+    edit: "Düzenle",
+    
+    // Bottom Tab
+    home: "Ana Sayfa",
+    digital_key: "Dijital Anahtar",
+    room_service: "Oda Servisi",
+    spa: "Spa",
+    profile: "Profil",
+    settings: "Ayarlar",
+    
+    // Home Screen
+    upcoming_stay: "Yaklaşan Konaklamanız",
+    no_upcoming_stay: "Yaklaşan konaklamanız bulunmuyor",
+    view_reservation: "Rezervasyonu Görüntüle",
+    check_in_date: "Giriş Tarihi",
+    check_out_date: "Çıkış Tarihi",
+    room_number: "Oda No",
+    
+    // Digital Key
+    digital_key_title: "Dijital Oda Anahtarı",
+    digital_key_desc: "Kapıyı açmak için QR kodu okutun",
+    key_valid_until: "Geçerlilik Tarihi",
+    key_active: "Aktif",
+    key_used: "Kullanıldı",
+    key_expired: "Süresi Doldu",
+    generate_key: "Anahtar Oluştur",
+    
+    // Room Service
+    menu: "Menü",
+    categories: "Kategoriler",
+    appetizer: "Başlangıç",
+    main_course: "Ana Yemek",
+    dessert: "Tatlı",
+    beverage: "İçecek",
+    add_to_cart: "Sepete Ekle",
+    cart: "Sepetim",
+    order_now: "Sipariş Ver",
+    special_instructions: "Özel İstekler",
+    estimated_delivery: "Tahmini Teslimat",
+    order_status: "Sipariş Durumu",
+    
+    // Spa
+    spa_services: "Spa Hizmetleri",
+    book_appointment: "Randevu Al",
+    select_date: "Tarih Seç",
+    select_time: "Saat Seç",
+    duration: "Süre",
+    minutes: "dakika",
+    appointment_confirmed: "Randevu Onaylandı",
+    cancel_appointment: "Randevuyu İptal Et",
+    
+    // Profile
+    personal_info: "Kişisel Bilgiler",
+    first_name: "Ad",
+    last_name: "Soyad",
+    email: "E-posta",
+    phone: "Telefon",
+    date_of_birth: "Doğum Tarihi",
+    country: "Ülke",
+    city: "Şehir",
+    address: "Adres",
+    
+    // Settings
+    notifications: "Bildirimler",
+    push_notifications: "Push Bildirimleri",
+    email_notifications: "E-posta Bildirimleri",
+    sms_notifications: "SMS Bildirimleri",
+    biometric_login: "Biyometrik Giriş",
+    language: "Dil",
+    change_password: "Şifre Değiştir",
+    logout: "Çıkış Yap",
+    
+    // Language names
+    turkish: "Türkçe",
+    english: "İngilizce",
+    german: "Almanca",
+    russian: "Rusça"
+  },
+  en: {
+    welcome: "Welcome",
+    hotel_name: "Hotel Management System",
+    loading: "Loading...",
+    error: "Error",
+    success: "Success",
+    save: "Save",
+    cancel: "Cancel",
+    confirm: "Confirm",
+    delete: "Delete",
+    edit: "Edit",
+    
+    home: "Home",
+    digital_key: "Digital Key",
+    room_service: "Room Service",
+    spa: "Spa",
+    profile: "Profile",
+    settings: "Settings",
+    
+    upcoming_stay: "Upcoming Stay",
+    no_upcoming_stay: "No upcoming stay",
+    view_reservation: "View Reservation",
+    check_in_date: "Check-in Date",
+    check_out_date: "Check-out Date",
+    room_number: "Room Number",
+    
+    digital_key_title: "Digital Room Key",
+    digital_key_desc: "Scan QR code to open the door",
+    key_valid_until: "Valid Until",
+    key_active: "Active",
+    key_used: "Used",
+    key_expired: "Expired",
+    generate_key: "Generate Key",
+    
+    menu: "Menu",
+    categories: "Categories",
+    appetizer: "Appetizer",
+    main_course: "Main Course",
+    dessert: "Dessert",
+    beverage: "Beverage",
+    add_to_cart: "Add to Cart",
+    cart: "Cart",
+    order_now: "Order Now",
+    special_instructions: "Special Instructions",
+    estimated_delivery: "Estimated Delivery",
+    order_status: "Order Status",
+    
+    spa_services: "Spa Services",
+    book_appointment: "Book Appointment",
+    select_date: "Select Date",
+    select_time: "Select Time",
+    duration: "Duration",
+    minutes: "minutes",
+    appointment_confirmed: "Appointment Confirmed",
+    cancel_appointment: "Cancel Appointment",
+    
+    personal_info: "Personal Information",
+    first_name: "First Name",
+    last_name: "Last Name",
+    email: "Email",
+    phone: "Phone",
+    date_of_birth: "Date of Birth",
+    country: "Country",
+    city: "City",
+    address: "Address",
+    
+    notifications: "Notifications",
+    push_notifications: "Push Notifications",
+    email_notifications: "Email Notifications",
+    sms_notifications: "SMS Notifications",
+    biometric_login: "Biometric Login",
+    language: "Language",
+    change_password: "Change Password",
+    logout: "Logout",
+    
+    turkish: "Turkish",
+    english: "English",
+    german: "German",
+    russian: "Russian"
+  },
+  de: {
+    welcome: "Willkommen",
+    hotel_name: "Hotel-Management-System",
+    loading: "Wird geladen...",
+    error: "Fehler",
+    success: "Erfolg",
+    save: "Speichern",
+    cancel: "Abbrechen",
+    confirm: "Bestätigen",
+    delete: "Löschen",
+    edit: "Bearbeiten",
+    
+    home: "Startseite",
+    digital_key: "Digitaler Schlüssel",
+    room_service: "Zimmerservice",
+    spa: "Spa",
+    profile: "Profil",
+    settings: "Einstellungen",
+    
+    first_name: "Vorname",
+    last_name: "Nachname",
+    email: "E-Mail",
+    phone: "Telefon",
+    logout: "Abmelden",
+    
+    turkish: "Türkisch",
+    english: "Englisch",
+    german: "Deutsch",
+    russian: "Russisch"
+  },
+  ru: {
+    welcome: "Добро пожаловать",
+    hotel_name: "Система управления отелем",
+    loading: "Загрузка...",
+    error: "Ошибка",
+    success: "Успешно",
+    save: "Сохранить",
+    cancel: "Отмена",
+    confirm: "Подтвердить",
+    delete: "Удалить",
+    edit: "Редактировать",
+    
+    home: "Главная",
+    digital_key: "Цифровой ключ",
+    room_service: "Обслуживание номеров",
+    spa: "Спа",
+    profile: "Профиль",
+    settings: "Настройки",
+    
+    first_name: "Имя",
+    last_name: "Фамилия",
+    email: "Эл. почта",
+    phone: "Телефон",
+    logout: "Выйти",
+    
+    turkish: "Турецкий",
+    english: "Английский",
+    german: "Немецкий",
+    russian: "Русский"
+  }
+};
+
+export const getTranslation = (key: string, language: string = 'tr'): string => {
+  return translations[language]?.[key] || translations['tr'][key] || key;
+};

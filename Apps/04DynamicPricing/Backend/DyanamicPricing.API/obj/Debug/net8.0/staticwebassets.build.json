@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ZLKKMYJWjnu7Ojb8q0uB0WReXwGcCBRfWYdRFz6VBg8=",
+  "Source": "DyanamicPricing.API",
+  "BasePath": "_content/DyanamicPricing.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

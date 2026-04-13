@@ -1,0 +1,25 @@
+Lesson/
+├── Apps/
+│   ├── 01-HotelManagement/          ✅ Otel, Zincir, Marka Yönetimi
+│   ├── 02-RoomManagement/           ✅ Oda Tipleri ve Stok Yönetimi
+│   ├── 03-ReservationSystem/        ✅ Rezervasyon Yönetimi
+│   ├── 04-DynamicPricing/           ✅ Dinamik Fiyatlandırma
+│   ├── 05-CRM-Loyalty/              ✅ Müşteri İlişkileri ve Sadakat
+│   ├── 06-ChannelManagement/        ✅ Kanal Yönetimi (OTA/GDS)
+│   ├── 07-Payment-Invoice/          ✅ Ödeme ve Fatura
+│   ├── 08-Housekeeping/             ✅ Kat Hizmetleri
+│   ├── 09-Restaurant-FB/            ✅ Restoran ve F&B Yönetimi
+│   ├── 10-MICE-Meeting/             ✅ Toplantı ve Etkinlik Yönetimi
+│   ├── 11-Reporting-BI/             ✅ Raporlama ve İş Zekası
+│   ├── 12-Auth-RBAC/                ✅ Kimlik Doğrulama ve Yetkilendirme
+│   ├── 13-Notification-Push/        ✅ Bildirim ve Push Servisi
+│   ├── 14-AI-Recommendation/        ✅ Yapay Zeka ve Öneri Sistemi
+│   ├── 15-Chatbot-NLP/              ✅ Chatbot ve NLP
+│   ├── 16-Mobile-Customer/          ✅ Müşteri Mobil Uygulaması
+│   ├── 17-Mobile-Staff/             ✅ Personel Mobil Uygulaması
+│   ├── 18-API-Gateway/              ✅ API Gateway
+│   ├── 19-Logging-Monitoring/       ✅ Loglama ve Monitoring
+│   └── 20-Testing-Suite/            ✅ Test Paketi
+└── Shared/
+    ├── SharedModels/
+    └── SharedUtils/

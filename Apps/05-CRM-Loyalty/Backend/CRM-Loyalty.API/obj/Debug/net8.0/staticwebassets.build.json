@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Ly4WoYylnkEoP+KjGPvAGVvwkEffW1zSh0GPF9ffddk=",
+  "Source": "CRM-Loyalty.API",
+  "BasePath": "_content/CRM-Loyalty.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
